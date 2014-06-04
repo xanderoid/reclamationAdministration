@@ -129,6 +129,7 @@
 	if( $iw_opt['header-ver'] == 1){
 	
 		get_template_part('headerver');
+
 	
 	} elseif( $iw_opt['header-ver'] == 2){
 	
@@ -174,7 +175,10 @@
 							
 					?>
 				</div>
+				<div>
+					<?php get_sidebar( 'add'); ?>
+				</div>
 			</div>
-	
+
 		</div>
 	</nav>

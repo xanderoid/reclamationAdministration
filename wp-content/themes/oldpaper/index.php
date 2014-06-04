@@ -209,6 +209,8 @@
 				<?php if($paged==1){ get_template_part('part', 'editorial'); } ?>
 				
 				<?php get_sidebar() ?>
+
+
 				
 			</aside>	
 		</div> <!-- /row featured -->
