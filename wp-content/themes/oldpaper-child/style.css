@@ -7,3 +7,9 @@ Version: 1.0
 */
 
 @import url("../oldpaper/style.css");
+
+#logo {
+	background-image: url('../../uploads/2014/06/bricksTitleBackground-800x180.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
