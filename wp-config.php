@@ -16,16 +16,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'reclamationAdmin');
+define('DB_NAME', 'joetaylormadehomes_com');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'joetaylormadehom');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'uenfz7Sk');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'mysql.joetaylormadehomes.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
