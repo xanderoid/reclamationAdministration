@@ -14,7 +14,7 @@
 		</div>
 		
 	<?php elseif( has_post_format('image') ) : ?>
-
+	
 		<div class="col-sm-12">
 			<div class="featimg">
 		    	<a href="<?php the_permalink() ?>">
@@ -73,7 +73,7 @@
 	
 	<div class="col-sm-12">
 			<h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
-			<?php get_template_part('part', 'textinfo') ?>
+			<?php the_content() ?>
 		    <?php the_excerpt() ?>
 	</div>
 
