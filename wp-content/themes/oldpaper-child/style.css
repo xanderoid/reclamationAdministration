@@ -13,3 +13,7 @@ Version: 1.0
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+.countcomments {
+	display: hidden;
+}
