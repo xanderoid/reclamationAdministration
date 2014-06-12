@@ -18,3 +18,11 @@ Version: 1.0
 	max-width: 800px;
 	max-height: 600px;
 }
+
+blockquote {
+	border-right: none;
+}
+
+blockquote p {
+	text-align: left;
+}
