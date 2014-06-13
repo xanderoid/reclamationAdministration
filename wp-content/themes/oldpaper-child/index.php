@@ -1,135 +1,6 @@
 <?php get_header() ?>
 	
-	<?php
-			
-		// ottengo il numero di pagina
-		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-			
-	?>
-	
-	<?php if($paged==1) : ?>
-	<section id="chess" class="container">
-		
-		<div class="row no-gutter">
-			<?php
-				
-			/*
-				
-			king article
-				
-			*/
-					
-			$args = array(
-				'posts_per_page' => 1,
-				'ignore_sticky_posts' => 1		
-			);
-					
-			$query = new WP_Query( $args );
-							
-			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
-							
-			?>
-			
-			<div class="col-sm-7">
-				<article <?php post_class('king')?> id="post-<?php the_id() ?>">
-				    
-				   <?php get_template_part('loop', 'chess'); ?>
-				    		
-				</article>
-			</div>		
-			
-			<?php
-			
-			endwhile; endif;
-			
-			wp_reset_postdata();
-			
-			?>
-					
-			<div class="col-sm-5">
-				<div class="row">
-						
-				<?php
-				
-				/*
-				
-				towers articles
-				
-				*/
-						
-				$args = array(
-					'posts_per_page' => 2,
-					'ignore_sticky_posts' => 1,
-					'offset' => 1,
-				);
-						
-				$query = new WP_Query( $args );
-							
-				if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
-									
-				?>
-						
-					<div class="col-sm-6 col-xs-6">
-						<article <?php post_class('tower')?> id="post-<?php the_id() ?>">
-						
-							<?php get_template_part('loop', 'chess'); ?>
-				    			
-				    	</article>
-					</div>
-							
-				<?php
-				
-				endwhile; endif;
-							
-				wp_reset_postdata();
-					    	
-				?>
-							
-				</div>
-				<div class="row">
-						
-				<?php
-				
-				/*
-				
-				queen article
-				
-				*/
-						
-				$args = array(
-					'posts_per_page' => 1,
-					'ignore_sticky_posts' => 1,
-					'offset' => 3,
-				);
-						
-				$query = new WP_Query( $args );
-							
-				if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
-									
-				?>
-						
-					<div class="col-sm-12 col-xs-12">
-						<article <?php post_class('queen')?> id="post-<?php the_id() ?>">
-				    		
-				    		<?php get_template_part('loop', 'chess'); ?>
-				    			
-				    	</article>
-					</div>
-							
-				<?php
-				
-				endwhile; endif;
-							
-				wp_reset_postdata();
-					    	
-				?>
-						
-				</div>
-			</div> <!-- /col-sm-4 -->
-		</div>
-		
-	</section>
-	<?php endif; ?>
+
 	
 	<section id="content" class="container">
 		<div class="wrapper">
@@ -163,6 +34,7 @@
 					$args = array(
 						'paged' => $paged,
 						'ignore_sticky_posts' => 1,
+						//commented out so all posts appear in blogroll
 						//'offset' => 4 + ( get_option('posts_per_page') * ($paged-1) ),
 						'posts_per_page' => get_option('posts_per_page')
 					);
