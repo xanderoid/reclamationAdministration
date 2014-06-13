@@ -163,7 +163,7 @@
 					$args = array(
 						'paged' => $paged,
 						'ignore_sticky_posts' => 1,
-						'offset' => 4 + ( get_option('posts_per_page') * ($paged-1) ),
+						//'offset' => 4 + ( get_option('posts_per_page') * ($paged-1) ),
 						'posts_per_page' => get_option('posts_per_page')
 					);
 							
